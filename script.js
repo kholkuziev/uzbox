@@ -4,7 +4,7 @@ const movies = [
   title: "Jarlik",
   img: "https://asilmedia.org/rasmlar/images/2025/02/20/xThe-Gorge-2025.webp.pagespeed.ic.P0PUQh1cvc.webp",
   video: "https://vk.com/video_ext.php?oid=1037388299&id=456239017",
-  genre: ["jangari", "ramantika"]
+  genre: ["jangari", "ramantika", "fantastika"]
 },
 
   {
