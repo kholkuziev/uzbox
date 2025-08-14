@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" /> <!-- Sahifa belgilar kodlashini UTF-8 qilib belgilaydi -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!-- Mobil qurilmalar uchun sahifa kengligini moslashtiradi -->
+  <title>UZboxTV</title> <!-- Brauzer tabidagi sahifa sarlavhasi -->
+  <link rel="stylesheet" href="style.css" /> <!-- Tashqi CSS faylga ulanish -->
+</head>
+<body>
+  <h1>UzBox</h1> <!-- Sahifa sarlavhasi -->
+
+  <!-- Kino yoki serial qidirish uchun input maydoni -->
+  <input type="text" id="search" placeholder="Kino yoki serial qidiring...">
+
+  <!-- Janr bo'yicha filtrlash tugmalari -->
+  <div class="genres">
+    <button data-genre="barchasi" class="active">Barchasi</button> <!-- Barcha janrlar uchun filtr -->
+    <button data-genre="jangari">Jangari</button> <!-- Jangari janri -->
+    <button data-genre="fantastika">Fantastika</button> <!-- Fantastika janri -->
+    <button data-genre="komediya">Komediya</button> <!-- Komediya janri -->
+    <button data-genre="qo'rqinchli">Qo'rqinchli</button> <!-- Qo'rqinchli janri -->
+    <button data-genre="ramantika">Ramantika</button> <!-- Ramantika janri -->
+  </div>
+
+  <h2>Kinolar</h2> <!-- Kinolar bo'limi sarlavhasi -->
+  <div id="movie-list" class="container"></div> <!-- Kinolar ro'yxati uchun konteyner -->
+
+  <h2>Seriallar</h2> <!-- Seriallar bo'limi sarlavhasi -->
+  <div id="series-list" class="container"></div> <!-- Seriallar ro'yxati uchun konteyner -->
+
+  <div id="pagination"></div> <!-- Sahifalash tugmalari uchun konteyner -->
+
+  <!-- Modal oyna — video player uchun oynani tashkil etadi -->
+  <div id="modal" class="modal">
+    <div class="modal-content"> <!-- Modal oynaning ichki qismi -->
+      
+      <span id="closeModal">&times;</span> <!-- Modal oynani yopish tugmasi -->
+      
+
+
+      <!-- Video player — iframe orqali videoni ko'rsatadi -->
+      <iframe id="videoPlayer" src="" frameborder="0" allowfullscreen></iframe>
+    <!-- 👇 Modal pastida loader animatsiyasi -->
+    <div class="bottom-loader" id="loader"></div>
+      <div class="interaction"> <!-- Izoh yozish uchun blok -->
+        <input type="text" id="commentInput" placeholder="Izoh yozing..." /> <!-- Izoh yozish maydoni -->
+      </div>
+
+      <!-- To'liq ekran tugmasi -->
+      <button id="fullscreenBtn" class="fullscreen-btn">To'liq Ekran</button>
+
+      <!-- Izoh yuborish tugmasi -->
+      <button id="sendComment">Yuborish</button>
+
+
+      <!-- Izohlar ro'yxati -->
+      <ul id="commentsList"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script> <!-- Tashqi JavaScript faylga ulanish -->
+</body>
+</html>
